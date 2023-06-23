@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:local="clr-namespace:MAUI_ChartAxis"
+             x:Class="MAUI_ChartAxis.MainPage">
+
+    <chart:SfCartesianChart >
+        <chart:SfCartesianChart.Title>
+            <Label Text="Sales Report of the Shop" Margin="0,0,0,5" 
+                   HorizontalOptions="Fill" 
+                   HorizontalTextAlignment="Center" 
+                   VerticalOptions="Center" 
+                   FontSize="16" />
+        </chart:SfCartesianChart.Title>
+        <chart:SfCartesianChart.Series>
+            <chart:ColumnSeries ItemsSource="{Binding SalesData}"   
+                                XBindingPath="Date" 
+                                YBindingPath="Value"   />
+        </chart:SfCartesianChart.Series>
+        
+        <chart:SfCartesianChart.XAxes>
+            <chart:DateTimeAxis Minimum="2023/06/21" EdgeLabelsDrawingMode="Fit"
+                                LabelRotation="90"
+                                LabelCreated="DateTimeAxis_LabelCreated">
+                
+                <chart:DateTimeAxis.LabelStyle>
+                    <chart:ChartAxisLabelStyle Background="Gray" 
+                                               TextColor="White" 
+                                               FontAttributes="Bold" 
+                                               LabelFormat="MMMM-dd"/>
+                </chart:DateTimeAxis.LabelStyle>
+
+                <chart:DateTimeAxis.Title>
+                    <chart:ChartAxisTitle Text="Date"/>
+                </chart:DateTimeAxis.Title>
+            </chart:DateTimeAxis>
+        </chart:SfCartesianChart.XAxes>
+
+        <chart:SfCartesianChart.YAxes>
+            <chart:NumericalAxis  Minimum="0">
+                
+                <chart:NumericalAxis.LabelStyle>
+                    <chart:ChartAxisLabelStyle LabelFormat="0' K"/>
+                </chart:NumericalAxis.LabelStyle>
+
+                <chart:NumericalAxis.Title>
+                    <chart:ChartAxisTitle Text="Sales Total(in thousands dollars)"/>
+                </chart:NumericalAxis.Title>
+            </chart:NumericalAxis>
+        </chart:SfCartesianChart.YAxes>
+        <chart:SfCartesianChart.BindingContext>
+            <local:ChartViewModel/>
+        </chart:SfCartesianChart.BindingContext>
+
+    </chart:SfCartesianChart>
+</ContentPage>
