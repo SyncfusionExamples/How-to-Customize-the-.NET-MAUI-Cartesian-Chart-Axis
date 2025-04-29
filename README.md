@@ -11,6 +11,7 @@ Label rotation is essential when dealing with a large number of labels or long l
 
 Besides formatting and rotation, you can also adjust other label properties such as font size, color, and style to make the chart more visually appealing and informative.
 
+![Customize chart axis](https://github.com/user-attachments/assets/34572cf3-808a-4af3-aad3-c6c0bc3890e4)
 
 ## Troubleshooting
 Path too long exception
