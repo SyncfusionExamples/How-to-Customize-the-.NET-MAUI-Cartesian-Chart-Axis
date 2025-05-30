@@ -5,7 +5,7 @@
              xmlns:local="clr-namespace:MAUI_ChartAxis"
              x:Class="MAUI_ChartAxis.MainPage">
 
-    <chart:SfCartesianChart >
+    <chart:SfCartesianChart Margin="0,10,0,0">
         <chart:SfCartesianChart.Title>
             <Label Text="Sales Report of the Shop" Margin="0,0,0,5" 
                    HorizontalOptions="Fill" 

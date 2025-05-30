@@ -1,9 +1,10 @@
-﻿namespace MAUI_ChartAxis;
-
-public partial class AppShell : Shell
+﻿namespace MAUI_ChartAxis
 {
-	public AppShell()
-	{
-		InitializeComponent();
-	}
+    public partial class AppShell : Shell
+    {
+        public AppShell()
+        {
+            InitializeComponent();
+        }
+    }
 }
